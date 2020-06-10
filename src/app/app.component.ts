@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, Renderer2, ElementRef, ViewChildren, QueryList, SimpleChanges, Query, TemplateRef, ViewContainerRef } from '@angular/core';
+import { NgModel } from '@angular/forms';
+import { debounceTime, startWith, distinctUntilChanged } from 'rxjs/operators'
+import { ChildComponent } from './child/child.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'viewchild';
+
+  login(){
+    alert("login")
+  }
+  signUp(){
+    alert('sighUp')
+  }
+
 }
